@@ -17,8 +17,9 @@ jobs:
         uses: actions/checkout@v6.1.0
       - name: Setup Java JDK
         uses: actions/setup-java@v6.2.0
-        with: java-version: '17'
-        distribution: 'temurin'
+        with: 
+          java-version: '17'
+          distribution: 'temurin'
       - name: build maven sans tests
         run: mvn clean package -DskipTests
         
